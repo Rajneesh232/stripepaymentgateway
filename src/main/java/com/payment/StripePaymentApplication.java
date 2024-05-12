@@ -13,7 +13,6 @@ public class StripePaymentApplication {
 		SpringApplication.run(StripePaymentApplication.class, args);
 	}
 
-
 	@Value("${stripe.secretKey}")
 	private String secretKey;
 

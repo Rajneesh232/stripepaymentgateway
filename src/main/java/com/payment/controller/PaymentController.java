@@ -24,7 +24,6 @@ public class PaymentController {
         Stripe.apiKey = secretKey;
     }
 
-    
     @PostMapping("/create-payment-intent")
     public ResponseEntity<String> createPaymentIntent(@RequestBody PaymentRequest paymentRequest) {
         try {
@@ -41,4 +40,5 @@ public class PaymentController {
                     .body("Error creating PaymentIntent: " + e.getMessage());
         }
     }
+
 }
