@@ -24,6 +24,7 @@ public class PaymentController {
         Stripe.apiKey = secretKey;
     }
 
+    
     @PostMapping("/create-payment-intent")
     public ResponseEntity<String> createPaymentIntent(@RequestBody PaymentRequest paymentRequest) {
         try {
